@@ -1,0 +1,115 @@
+:root {
+  color-scheme: light;
+  --bg: #FBF7EE;
+  --surface: #F2F2F2;
+  --ink: #062F40;
+  --ink-soft: rgba(6,47,64,.82);
+  --accent: #4BA684;
+  --accent-text: #2E7D5F;
+  --btn-bg: #062F40;
+  --btn-fg: #FBF7EE;
+  --line: rgba(6,47,64,.14);
+  --focus: #4BA684;
+}
+
+:root[data-contrast="high"] {
+  color-scheme: dark;
+  --bg: #031C28;
+  --surface: #062F40;
+  --ink: #FFFFFF;
+  --ink-soft: #F2F2F2;
+  --accent: #88BFAB;
+  --accent-text: #A9D8C5;
+  --btn-bg: #88BFAB;
+  --btn-fg: #031C28;
+  --line: #88BFAB;
+  --focus: #FFFFFF;
+}
+
+header.site-header {
+  background: color-mix(in srgb,var(--bg) 94%,transparent);
+  border-color: var(--line);
+}
+
+.nav-link {
+  color: var(--ink-soft);
+  transition: color .2s;
+}
+
+.nav-link:hover,
+.nav-link[aria-current="location"] {
+  color: var(--accent-text);
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  height: 2px;
+  margin-top: 4px;
+  background: var(--accent-text);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .2s;
+}
+
+.nav-link:hover::after,
+.nav-link[aria-current="location"]::after {
+  transform: scaleX(1);
+}
+
+.project-track,
+.people-track { scrollbar-width: none; }
+
+.project-track::-webkit-scrollbar,
+.people-track::-webkit-scrollbar {
+  display: none;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .55s ease,transform .55s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.placeholder-photo {
+  background: linear-gradient(145deg,var(--surface),var(--bg));
+}
+
+.person-card button[disabled],
+#team-grid button[disabled] {
+  color: #6b7280 !important;
+  border-color: rgba(255,255,255,.1) !important;
+  background-color: rgba(255,255,255,.03) !important;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus) !important;
+  outline-offset: 3px;
+  box-shadow: none !important;
+}
+
+@media (hover: none) {
+  .carousel-arrow {
+    opacity: 1 !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

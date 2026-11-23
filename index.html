@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth scroll-pt-[5.5rem]">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FBF7EE">
+  <meta name="description" content="Laboratório de Transformação Digital — inovação aplicada e desenvolvimento de soluções digitais.">
+  <title>LTD</title>
+  <script>
+    try{
+      if(localStorage.getItem('ltd-high-contrast')==='true')
+      document.documentElement.dataset.contrast='high'
+    }
+    catch{}
+    </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config={theme:{extend:{colors:{ink:'var(--ink)',panel:'var(--surface)',line:'var(--line)',signal:'var(--accent-text)',ember:'var(--accent)',btn:'var(--btn-bg)',btnfg:'var(--btn-fg)',gray:{200:'var(--ink-soft)',300:'var(--ink-soft)',400:'var(--ink-soft)',500:'var(--ink-soft)',600:'var(--ink-soft)'}},fontFamily:{display:['Manrope','ui-sans-serif','sans-serif'],mono:['DM Mono','monospace']}}}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="overflow-x-hidden bg-[var(--bg)] font-display text-ink">
+  <header class="site-header fixed inset-x-0 top-0 z-50 border-b border-line backdrop-blur-md">
+    <nav class="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 md:px-8" aria-label="Navegação principal">
+      <a href="#inicio" class="flex items-center gap-3" aria-label="LTD, início">
+        <img src="./assets/img_logo/logo_ltd_peq.png" 
+        alt="Logo do LTD" 
+        class="h-9 w-9 object-contain">
+        <span class="text-sm font-extrabold tracking-[.2em] text-signal">LTD</span>
+      </a>
+      <div class="hidden items-center gap-9 md:flex">
+        <a class="nav-link text-xs font-bold tracking-[.12em]" href="#ltd">LTD</a>
+        <a class="nav-link text-xs font-bold tracking-[.12em]" href="#passaporte">PASSAPORTE DIGITAL</a>
+        <a class="nav-link text-xs font-bold tracking-[.12em]" href="#equipe">EQUIPE</a>
+      </div>
+      <button id="contrast-toggle" data-contrast-toggle type="button" class="hidden h-10 w-10 items-center justify-center rounded-lg border border-line bg-transparent text-ink transition hover:bg-panel md:inline-flex" aria-label="Ativar alto contraste" aria-pressed="false" title="Ativar alto contraste">
+        <i data-lucide="contrast" class="h-4 w-4 text-ember" aria-hidden="true"></i>
+      </button>
+      <button 
+        id="menu-toggle" 
+        class="grid h-11 w-11 place-items-center rounded-lg border border-line text-ink md:hidden" 
+        aria-label="Abrir menu" 
+        aria-expanded="false" 
+        aria-controls="mobile-menu">
+        <i data-lucide="menu" class="h-5 w-5"></i>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden border-t border-line bg-[var(--bg)] px-5 py-4 md:hidden">
+      <a class="mobile-link block py-3 text-sm font-bold tracking-widest text-gray-200" href="#ltd">LTD</a>
+      <a class="mobile-link block py-3 text-sm font-bold tracking-widest text-gray-200" href="#passaporte">PASSAPORTE DIGITAL</a>
+      <a class="mobile-link block py-3 text-sm font-bold tracking-widest text-gray-200" href="#equipe">EQUIPE</a>
+      <button id="mobile-contrast-toggle" data-contrast-toggle type="button" class="mobile-link flex w-full items-center gap-3 border-t border-line py-4 text-left text-sm font-bold tracking-widest text-gray-200 transition hover:text-signal" aria-label="Ativar alto contraste" aria-pressed="false" title="Ativar alto contraste">
+        <i data-lucide="contrast" class="h-4 w-4 text-ember" aria-hidden="true"></i>
+        <span data-contrast-label>Ativar alto contraste</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="relative flex min-h-[92svh] items-center overflow-hidden pt-20">
+      <div class="mx-auto w-full max-w-7xl px-5 py-24 text-left md:px-8">
+        <h1 class="max-w-6xl font-extrabold tracking-[-.06em]">
+          <span class="block text-2xl font-semibold uppercase leading-tight tracking-[.18em] text-gray-400 sm:text-3xl md:text-4xl">Laboratório de</span>
+          <span class="mt-4 block text-5xl leading-[.98] sm:text-7xl md:text-8xl lg:text-[7rem]">Transformação <span class="text-signal">Digital.</span></span>
+        </h1>
+        <p class="mt-7 max-w-2xl text-lg font-semibold leading-8 text-signal uppercase">
+          Para quem nasceu conectado, mas ainda tem muito a descobrir.
+        </p>
+        <div class="mt-10 flex justify-start">
+          <a href="#ltd" class="group inline-flex items-center gap-3 rounded-full bg-btn px-6 py-3 text-sm font-bold tracking-wide text-btnfg transition duration-200 hover:-translate-y-0.5 hover:brightness-90 focus-visible:outline-none">Conheça o projeto 
+            <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="ltd" class="border-y border-line bg-[var(--surface)] px-5 py-24 md:py-32">
+      <div class="mx-auto grid max-w-7xl items-center gap-14 md:grid-cols-[1.1fr_.9fr] md:gap-20">
+        <div class="reveal">
+          <h2 class="text-4xl font-extrabold tracking-tight md:text-5xl">
+            Sobre o <span class="text-signal">LTD</span>
+          </h2>
+          <p class="mt-5 max-w-2xl text-base leading-8 text-gray-300">
+            O Laboratório de Transformação Digital é um projeto idealizado e coordenado por Larissa Garcia e realizado por estudantes dos cursos de Tecnologia da Informação da Facy Wyden.
+          </p>
+          <p class="mt-4 max-w-2xl text-base leading-8 text-gray-400">
+            Apesar de ter nascido na era da tecnologia, a Geração Z ainda enfrenta dificuldades com conceitos básicos de informática. Nosso objetivo é transformar esse cenário, promovendo o letramento digital dos nativos digitais.
+          </p>
+          <h3 class="mt-7 text-xl font-bold text-ink">Como funciona?</h3>
+          <p class="mt-3 max-w-2xl text-base leading-8 text-gray-400">
+            O conteúdo está organizado em 7 módulos que reúnem os principais temas da informática básica. Eles são aplicados ao longo de 10 oficinas práticas, todas criadas e conduzidas pelos próprios discentes.
+          </p>
+        </div>
+        <div class="reveal flex min-h-[340px] items-center justify-center bg-transparent p-2 md:min-h-[420px]">
+          <img src="./assets/img_logo/logo_ltd_grd.png" 
+          alt="Identidade visual oficial do Laboratório de Transformação Digital" 
+          class="max-h-[440px] w-auto max-w-full object-contain md:max-h-[420px]">
+        </div>
+      </div>
+    </section>
+
+    <section id="passaporte" class="bg-[var(--bg)] px-5 py-24 md:py-32">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal mb-14 max-w-5xl"><h2 class="text-4xl font-extrabold tracking-tight md:text-5xl">Passaporte <span class="text-signal">Digital</span></h2>
+          <p class="mt-6 text-base leading-8 text-gray-300">
+            O Passaporte Digital Ltd é uma plataforma que foi construída com objetivo de  ajudar o projeto ltd 2026 à registrar a presença de alunos , coletar feedbacks de reação  e disponibilizar uma galeria virtual de insígnias durante as oficinas.
+            Foi construído  pelos discentes dos cursos de Ti a facy Wyden , coordenado por Larissa Garcia
+            <br>
+            A plataforma trabalha com a ideia de gamificação,  como em um jogo cada vez que você  avança  de fase você  desbloqueia  um troféu, em cada oficina que o aluno estiver presente ele vai desbloquear e ganhar uma insígnia, o objetivo é  fazer com que isso dê  ainda mais motivação  para o aluno participar.
+            
+          </p>
+        </div>
+
+        <div class="carousel group reveal relative" aria-label="Carrossel de telas do Passaporte Digital">
+          <div id="project-track" class="project-track snap-x snap-mandatory flex gap-5 overflow-x-auto scroll-smooth pb-4" tabindex="0" aria-label="Telas do projeto">
+            <figure class="project-slide snap-start min-w-[82%] sm:min-w-[56%] lg:min-w-[39%]">
+              <div class="flex h-[290px] items-center justify-center overflow-hidden rounded-xl border border-line bg-panel p-4 sm:h-[360px]">
+                <img src="./assets/img_app/interface_t_mb.jpeg" alt="Tela do Passaporte Digital em dispositivo móvel" class="h-full w-full object-contain">
+              </div>
+              <figcaption class="mt-3 text-xs text-gray-500">Interface mobile</figcaption>
+            </figure>
+
+            <figure class="project-slide snap-start min-w-[82%] sm:min-w-[56%] lg:min-w-[39%]">
+              <div class="flex h-[290px] items-center justify-center overflow-hidden rounded-xl border border-line bg-panel p-4 sm:h-[360px]">
+                <img src="./assets/img_app/interface_t_mb2.jpeg" alt="Outra tela mobile do Passaporte Digital" class="h-full w-full object-contain">
+              </div>
+              <figcaption class="mt-3 text-xs text-gray-500">Interface mobile</figcaption>
+            </figure>
+
+            <figure class="project-slide snap-start min-w-[82%] sm:min-w-[56%] lg:min-w-[39%]">
+              <div class="flex h-[290px] items-center justify-center overflow-hidden rounded-xl border border-line bg-panel p-4 sm:h-[360px]">
+                <img src="./assets/img_app/interface_t_mb3.jpeg" alt="Tela adicional do Passaporte Digital em dispositivo móvel" class="h-full w-full object-contain">
+              </div>
+              <figcaption class="mt-3 text-xs text-gray-500">Interface mobile</figcaption>
+            </figure>
+
+            <figure class="project-slide snap-start min-w-[82%] sm:min-w-[56%] lg:min-w-[39%]">
+              <div class="flex h-[290px] items-center justify-center overflow-hidden rounded-xl border border-line bg-panel p-4 sm:h-[360px]">
+              <img src="./assets/img_app/interface_t_grandes_pt1.png" alt="Tela ampla do Passaporte Digital" class="h-full w-full object-contain">
+              </div>
+              <figcaption class="mt-3 text-xs text-gray-500">Interface em telas maiores</figcaption>
+            </figure>
+            
+            <figure class="project-slide snap-start min-w-[82%] sm:min-w-[56%] lg:min-w-[39%]">
+              <div class="flex h-[290px] items-center justify-center overflow-hidden rounded-xl border border-line bg-panel p-4 sm:h-[360px]">
+              <img src="./assets/img_app/interface_t_grandes_pt2.png" alt="Segunda tela ampla do Passaporte Digital" class="h-full w-full object-contain">
+              </div>
+              <figcaption class="mt-3 text-xs text-gray-500">Interface em telas maiores</figcaption>
+            </figure>
+
+            <figure class="project-slide snap-start min-w-[82%] sm:min-w-[56%] lg:min-w-[39%]">
+              <div class="flex h-[290px] items-center justify-center overflow-hidden rounded-xl border border-line bg-panel p-4 sm:h-[360px]">
+              <img src="./assets/img_app/insignias.png" alt="Insígnias do projeto Passaporte Digital" 
+              class="h-full w-full object-contain">
+              </div>
+              <figcaption class="mt-3 text-xs text-gray-500">
+                Insígnias do projeto
+              </figcaption>
+            </figure>
+          </div>
+
+          <button 
+            class="carousel-arrow absolute left-2 top-[42%] grid h-12 w-6 place-items-center rounded-md border border-btn bg-btn text-btnfg opacity-0 transition-opacity duration-200 hover:bg-signal group-hover:opacity-100 group-focus-within:opacity-100 focus-visible:opacity-100" data-direction="-1" 
+            data-target="project-track" 
+            aria-label="Ver telas anteriores">
+            <i data-lucide="play" class="h-3 w-3 rotate-180 fill-current stroke-none"></i>
+          </button>
+          <button 
+            class="carousel-arrow absolute right-2 top-[42%] grid h-12 w-6 place-items-center rounded-md border border-btn bg-btn text-btnfg opacity-0 transition-opacity duration-200 hover:bg-signal group-hover:opacity-100 group-focus-within:opacity-100 focus-visible:opacity-100" data-direction="1" 
+            data-target="project-track" 
+            aria-label="Ver próximas telas">
+            <i data-lucide="play" class="h-3 w-3 fill-current stroke-none"></i>
+          </button>
+        </div>
+
+        <div class="reveal mt-24">
+          <div class="mb-8 flex items-end justify-between gap-4">
+            <div>
+              <h3 class="text-2xl font-bold md:text-3xl text-signal">
+                Equipe de Desenvolvimento 
+              </h3>
+            </div>
+            <span class="hidden text-xs text-gray-500 sm:block">
+              Arraste para explorar
+            </span>
+          </div>
+          <div class="carousel group relative" aria-label="Carrossel da equipe do Passaporte Digital">
+          <div id="project-people" class="people-track snap-x snap-mandatory flex gap-4 overflow-x-auto scroll-smooth pb-3" tabindex="0" aria-label="Integrantes do projeto">
+            </div>
+            <button 
+              class="carousel-arrow absolute -left-2 top-1/2 grid h-12 w-6 -translate-y-1/2 place-items-center rounded-md border border-btn bg-btn text-btnfg opacity-0 transition-opacity duration-200 hover:bg-signal group-hover:opacity-100 group-focus-within:opacity-100 focus-visible:opacity-100" data-direction="-1" 
+              data-target="project-people" 
+              aria-label="Ver integrantes anteriores">
+              <i data-lucide="play" class="h-3 w-3 rotate-180 fill-current stroke-none"></i>
+            </button>
+            <button 
+              class="carousel-arrow absolute -right-2 top-1/2 grid h-12 w-6 -translate-y-1/2 place-items-center rounded-md border border-btn bg-btn text-btnfg opacity-0 transition-opacity duration-200 hover:bg-signal group-hover:opacity-100 group-focus-within:opacity-100 focus-visible:opacity-100" data-direction="1" 
+              data-target="project-people" 
+              aria-label="Ver próximos integrantes">
+              <i data-lucide="play" class="h-3 w-3 fill-current stroke-none"></i>
+            </button>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="equipe" class="border-y border-line bg-[var(--surface)] px-5 py-24 md:py-32">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal mb-12 text-center">
+          <h2 class="text-4xl font-extrabold tracking-tight md:text-5xl">
+            <span class="text-signal">Equipe</span>
+          </h2>
+          <p class="mt-4 text-signal">
+            PESSOAS QUE FIZERAM O LTD ACONTECER
+          </p>
+        </div>
+
+        <div id="team-grid" class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="px-5 py-8">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 text-xs text-gray-500 sm:flex-row">
+      <p>Laboratório de Transformação Digital</p>
+      <a href="#inicio" class="transition hover:text-signal">Voltar ao início ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js?v=15" defer></script>
+</body>
+</html>
